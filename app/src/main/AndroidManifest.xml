@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:launchMode="singleTop"
-        android:theme="@style/Theme.Pecoade_app">
+        android:theme="@style/SplashScreenTheme">
         <activity
             android:name=".RootActivity"
             android:exported="true">

@@ -11,6 +11,7 @@ class RootActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+         setTheme(R.style.Theme_Pecoade_app)
         binding = ActivityRootBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
