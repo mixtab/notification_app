@@ -59,5 +59,10 @@ object NotificationUtil {
         }
     }
 
+    fun clearNotification(positionId: Int, context: Context){
+        val notificationManager = context.getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.cancel(positionId)
+    }
+
 
 }

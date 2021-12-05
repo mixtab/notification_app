@@ -41,11 +41,11 @@ class MainFragment(
         binding.viewPager.adapter = ViewPagerAdapter(this@MainFragment)
     }
 
-    private fun scrollToNotificationPage(){
+    private fun scrollToNotificationPage() {
         Handler(Looper.getMainLooper()).postDelayed({
             val notificationPage = arguments?.let { MainFragmentArgs.fromBundle(it).position } ?: 0
             binding.viewPager.setCurrentItem(notificationPage, true)
-        },100)
+        }, 100)
     }
 
     private fun updateViewPager() {
@@ -60,17 +60,23 @@ class MainFragment(
     }
 
     override fun onNotificationClicked(position: Int) {
-        NotificationUtil.createViewPagerNotification(position , requireContext())
+        NotificationUtil.createViewPagerNotification(position, requireContext())
     }
 
     override fun onButtonIncreaseClicked(position: Int) {
         viewModel.addPage(Page(position))
         updateViewPager()
-        Handler(Looper.getMainLooper()).postDelayed({binding.viewPager.setCurrentItem(position+1, true)},100)
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.viewPager.setCurrentItem(
+                position + 1,
+                true
+            )
+        }, 100)
     }
 
     override fun onButtonDecreaseClicked(lastItem: Int) {
         viewModel.deletePage(Page(id = lastItem))
         updateViewPager()
+        NotificationUtil.clearNotification(lastItem,requireContext())
     }
 }
