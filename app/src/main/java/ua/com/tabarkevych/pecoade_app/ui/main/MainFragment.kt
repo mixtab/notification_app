@@ -20,6 +20,7 @@ class MainFragment(
     override val bindingInflater: (LayoutInflater) -> ViewBinding
         get() = FragmentMainBinding::inflate
     private val viewModel: MainViewModel by viewModels()
+    private var scrollToPage: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,13 +28,13 @@ class MainFragment(
             enterTransition = it
             exitTransition = it
         }
-        scrollToNotificationPage()
+        scrollToPage = arguments?.let { MainFragmentArgs.fromBundle(it).position } ?: 0
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViewPager()
-        updateViewPager()
+        updateViewPager(true)
     }
 
 
@@ -41,14 +42,7 @@ class MainFragment(
         binding.viewPager.adapter = ViewPagerAdapter(this@MainFragment)
     }
 
-    private fun scrollToNotificationPage() {
-        Handler(Looper.getMainLooper()).postDelayed({
-            val notificationPage = arguments?.let { MainFragmentArgs.fromBundle(it).position } ?: 0
-            binding.viewPager.setCurrentItem(notificationPage, true)
-        }, 100)
-    }
-
-    private fun updateViewPager() {
+    private fun updateViewPager(withScroll: Boolean) {
         binding.viewPager.apply {
             viewModel.readAllData.observe(viewLifecycleOwner, { pages ->
                 val adapter = (adapter as ViewPagerAdapter)
@@ -56,6 +50,12 @@ class MainFragment(
                 adapter.setData(pages)
                 adapter.submitList(pages)
             })
+            if (withScroll) Handler(Looper.getMainLooper()).postDelayed({
+                binding.viewPager.setCurrentItem(
+                    scrollToPage,
+                    true
+                )
+            }, 200)
         }
     }
 
@@ -65,18 +65,12 @@ class MainFragment(
 
     override fun onButtonIncreaseClicked(position: Int) {
         viewModel.addPage(Page(position))
-        updateViewPager()
-        Handler(Looper.getMainLooper()).postDelayed({
-            binding.viewPager.setCurrentItem(
-                position + 1,
-                true
-            )
-        }, 100)
+        updateViewPager(true)
+        scrollToPage = position + 1
     }
 
     override fun onButtonDecreaseClicked(lastItem: Int) {
         viewModel.deletePage(Page(id = lastItem))
-        updateViewPager()
-        NotificationUtil.clearNotification(lastItem,requireContext())
+        updateViewPager(false)
     }
 }

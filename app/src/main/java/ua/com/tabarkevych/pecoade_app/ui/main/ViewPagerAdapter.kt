@@ -46,7 +46,7 @@ class ViewPagerAdapter(
             imageDecrease.visibility = if (position == 0) View.GONE else View.VISIBLE
             imageRectangle.text = (position + 1).toString()
 
-            imageIncrease.setOnClickListener { listener.onButtonIncreaseClicked(position + 2) }
+            imageIncrease.setOnClickListener { listener.onButtonIncreaseClicked(itemCount + 1) }
             imageDecrease.setOnClickListener { listener.onButtonDecreaseClicked(itemCount) }
 
         }
