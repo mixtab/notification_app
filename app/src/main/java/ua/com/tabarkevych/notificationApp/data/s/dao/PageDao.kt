@@ -1,8 +1,8 @@
-package ua.com.tabarkevych.pecoade_app.data.s.dao
+package ua.com.tabarkevych.notificationApp.data.s.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import ua.com.tabarkevych.pecoade_app.data.s.entity.Page
+import ua.com.tabarkevych.notificationApp.data.s.entity.Page
 
 @Dao
 interface PageDao {

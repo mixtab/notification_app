@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app.ui.base
+package ua.com.tabarkevych.notificationApp.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

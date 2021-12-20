@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app.ui.main
+package ua.com.tabarkevych.notificationApp.ui.main
 
 import android.os.Bundle
 import android.os.Handler
@@ -9,10 +9,10 @@ import androidx.fragment.app.viewModels
 import androidx.viewbinding.ViewBinding
 import com.google.android.material.transition.MaterialFadeThrough
 import dagger.hilt.android.AndroidEntryPoint
-import ua.com.tabarkevych.pecoade_app.data.s.entity.Page
-import ua.com.tabarkevych.pecoade_app.databinding.FragmentMainBinding
-import ua.com.tabarkevych.pecoade_app.util.NotificationUtil
-import ua.com.tabarkevych.pecoade_app.ui.base.BaseFragment
+import ua.com.tabarkevych.notificationApp.data.s.entity.Page
+import ua.com.tabarkevych.notificationApp.databinding.FragmentMainBinding
+import ua.com.tabarkevych.notificationApp.util.NotificationUtil
+import ua.com.tabarkevych.notificationApp.ui.base.BaseFragment
 
 @AndroidEntryPoint
 class MainFragment(
@@ -34,7 +34,7 @@ class MainFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initViewPager()
-        updateViewPager(true)
+        Handler(Looper.getMainLooper()).postDelayed({ updateViewPager(true)},200)
     }
 
 

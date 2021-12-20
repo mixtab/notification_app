@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app.util
+package ua.com.tabarkevych.notificationApp.util
 
 import android.content.Context
 
@@ -14,8 +14,8 @@ import android.app.NotificationChannel
 
 import android.os.Build
 import androidx.navigation.NavDeepLinkBuilder
-import ua.com.tabarkevych.pecoade_app.R
-import ua.com.tabarkevych.pecoade_app.ui.main.MainFragmentArgs
+import ua.com.tabarkevych.notificationApp.R
+import ua.com.tabarkevych.notificationApp.ui.main.MainFragmentArgs
 
 
 object NotificationUtil {

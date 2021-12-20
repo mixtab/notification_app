@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ua.com.tabarkevych.pecoade_app">
+    package="ua.com.tabarkevych.notificationApp">
 
     <application
-        android:name=".PecodeApp"
+        android:name="ua.com.tabarkevych.notificationApp.NotificationApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:launchMode="singleTop"
         android:theme="@style/SplashScreenTheme">
         <activity
-            android:name=".RootActivity"
+            android:name="ua.com.tabarkevych.notificationApp.RootActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

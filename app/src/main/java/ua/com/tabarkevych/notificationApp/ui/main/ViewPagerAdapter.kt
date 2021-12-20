@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app.ui.main
+package ua.com.tabarkevych.notificationApp.ui.main
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ua.com.tabarkevych.pecoade_app.data.s.entity.Page
-import ua.com.tabarkevych.pecoade_app.databinding.ItemViewPagerBinding
+import ua.com.tabarkevych.notificationApp.data.s.entity.Page
+import ua.com.tabarkevych.notificationApp.databinding.ItemViewPagerBinding
 
 class ViewPagerAdapter(
     private var listener: EventListener

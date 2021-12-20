@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">pecode_app</string>
+    <string name="app_name">notification_app</string>
 
     <string name="notification_channel_id">Pecode app id</string>
     <string name="notification_channel_name">App notification</string>

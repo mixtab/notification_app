@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app.ui.main
+package ua.com.tabarkevych.notificationApp.ui.main
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -7,9 +7,9 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import ua.com.tabarkevych.pecoade_app.data.s.database.PageDatabase
-import ua.com.tabarkevych.pecoade_app.data.s.entity.Page
-import ua.com.tabarkevych.pecoade_app.data.s.repository.PageRepository
+import ua.com.tabarkevych.notificationApp.data.s.database.PageDatabase
+import ua.com.tabarkevych.notificationApp.data.s.entity.Page
+import ua.com.tabarkevych.notificationApp.data.s.repository.PageRepository
 import javax.inject.Inject
 
 @HiltViewModel

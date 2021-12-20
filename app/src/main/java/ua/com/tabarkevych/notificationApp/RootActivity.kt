@@ -1,9 +1,9 @@
-package ua.com.tabarkevych.pecoade_app
+package ua.com.tabarkevych.notificationApp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dagger.hilt.android.AndroidEntryPoint
-import ua.com.tabarkevych.pecoade_app.databinding.ActivityRootBinding
+import ua.com.tabarkevych.notificationApp.databinding.ActivityRootBinding
 
 @AndroidEntryPoint
 class RootActivity : AppCompatActivity() {

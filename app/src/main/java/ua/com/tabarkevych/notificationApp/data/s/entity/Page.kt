@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app.data.s.entity
+package ua.com.tabarkevych.notificationApp.data.s.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

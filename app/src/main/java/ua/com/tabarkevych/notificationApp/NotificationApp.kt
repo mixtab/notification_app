@@ -1,7 +1,7 @@
-package ua.com.tabarkevych.pecoade_app
+package ua.com.tabarkevych.notificationApp
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class PecodeApp : Application()
+class NotificationApp : Application()

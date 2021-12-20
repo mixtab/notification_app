@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="ua.com.tabarkevych.pecoade_app.ui.main.MainFragment"
+        android:name="ua.com.tabarkevych.notificationApp.ui.main.MainFragment"
         android:label="MainFragment"
         tools:layout="@layout/fragment_main">
         <argument

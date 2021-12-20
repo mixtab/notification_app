@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app.util
+package ua.com.tabarkevych.notificationApp.util
 
 object Constants {
 

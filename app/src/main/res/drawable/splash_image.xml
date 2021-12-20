@@ -2,7 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/white" />
     <item
-        android:drawable="@drawable/ic_pecode_logo"
+        android:drawable="@drawable/ic_notification"
         android:gravity="center"
-        android:height="47dp"/>
+        android:left="100dp"
+        android:right="100dp"
+        android:height="200dp"
+        android:width="200dp"/>
 </layer-list>

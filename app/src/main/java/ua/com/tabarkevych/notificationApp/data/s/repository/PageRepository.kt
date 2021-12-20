@@ -1,8 +1,8 @@
-package ua.com.tabarkevych.pecoade_app.data.s.repository
+package ua.com.tabarkevych.notificationApp.data.s.repository
 
 import androidx.lifecycle.LiveData
-import ua.com.tabarkevych.pecoade_app.data.s.dao.PageDao
-import ua.com.tabarkevych.pecoade_app.data.s.entity.Page
+import ua.com.tabarkevych.notificationApp.data.s.dao.PageDao
+import ua.com.tabarkevych.notificationApp.data.s.entity.Page
 
 class PageRepository(private val pageDao: PageDao) {
 

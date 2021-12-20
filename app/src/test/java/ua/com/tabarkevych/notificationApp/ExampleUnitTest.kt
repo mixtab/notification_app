@@ -1,4 +1,4 @@
-package ua.com.tabarkevych.pecoade_app
+package ua.com.tabarkevych.notificationApp
 
 import org.junit.Test
 
